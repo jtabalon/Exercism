@@ -10,7 +10,7 @@ const RATE_THREE: f64 = 0.77;
 pub fn production_rate_per_hour(speed: u8) -> f64 {
     // unimplemented!("calculate hourly production rate at speed: {}", speed)
 
-    let prod_rate = 
+    let prod_rate: f64 = 
         if speed < 1 && speed > 10 {
             break;
         }
