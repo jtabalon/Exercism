@@ -18,11 +18,11 @@ pub fn log(level: LogLevel, message: &str) -> String {
     }
 }
 pub fn info(message: &str) -> String {
-    unimplemented!()
+    "[INFO]: ".to_string() + &message.to_string()
 }
 pub fn warn(message: &str) -> String {
-    unimplemented!()
+    "[WARNING]: ".to_string() + &message.to_string()
 }
 pub fn error(message: &str) -> String {
-    unimplemented!()
+    "[ERROR]: ".to_string() + &message.to_string()
 }
