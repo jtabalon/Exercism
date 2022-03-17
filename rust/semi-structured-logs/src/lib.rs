@@ -11,7 +11,11 @@ pub enum LogLevel {
 }
 /// primary function for emitting logs
 pub fn log(level: LogLevel, message: &str) -> String {
-    unimplemented!()
+    match level {
+        LogLevel::Info => info(&message),
+        LogLevel::Warning => warn(&message),
+        LogLevel::Error => error(&message)
+    }
 }
 pub fn info(message: &str) -> String {
     unimplemented!()
