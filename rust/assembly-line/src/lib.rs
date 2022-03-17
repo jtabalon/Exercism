@@ -10,17 +10,16 @@ const RATE_THREE: f64 = 0.77;
 pub fn production_rate_per_hour(speed: u8) -> f64 {
     // unimplemented!("calculate hourly production rate at speed: {}", speed)
 
+    // TODO: troubleshoot types + functions
+
     let prod_rate: f64 = 
-        if speed < 1 && speed > 10 {
-            break;
-        }
-        else if speed <= 5 {
+        if speed <= 5 {
             4.0 * speed
         }
         else if speed >= 5 && speed <= 8 {
             4.0 * speed * 0.90
         }
-        else if speed >= 9 ** speed <= 10 {
+        else if speed >= 9 && speed <= 10 {
             4.0 * speed * 0.77
         };
     
@@ -29,8 +28,10 @@ pub fn production_rate_per_hour(speed: u8) -> f64 {
 }
 
 pub fn working_items_per_minute(speed: u8) -> u32 {
-    if speed < 1 && speed > 10 {
-        break;
-    }
+
+    let items_per_minute: u32 = production_rate_per_hour(speed) as u32 / 60;
+
+    return items_per_minute;
+    
     // unimplemented!("calculate the amount of working items at speed: {}", speed)
 }
