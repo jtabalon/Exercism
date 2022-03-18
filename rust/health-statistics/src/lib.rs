@@ -20,27 +20,29 @@ impl User {
 
     pub fn name(&self) -> &str {
         // unimplemented!()
-        let name = &self.name;
-        name
+        let get_name = &self.name; // notice the &self to reference a string here.
+        get_name
     }
 
     pub fn age(&self) -> u32 {
         // unimplemented!()
-        let age = &self.age;
-        age
+        let get_age = self.age; // notice there should not be an &
+        get_age
     }
 
     pub fn weight(&self) -> f32 {
-        let weight = &self.weight;
-        weight
+        let get_weight = self.weight;
+        get_weight
         // unimplemented!()
     }
 
     pub fn set_age(&mut self, new_age: u32) {
-        unimplemented!()
+        self.age = new_age;
+        // unimplemented!()
     }
 
     pub fn set_weight(&mut self, new_weight: f32) {
-        unimplemented!()
+        self.weight = new_weight;
+        // unimplemented!()
     }
 }
