@@ -13,14 +13,14 @@ pub fn production_rate_per_hour(speed: u8) -> f64 {
     // TODO: troubleshoot types + functions
 
     let prod_rate: f64 = 
-        if speed <= 5 {
-            4.0 * speed
+        if speed < 5 {
+            221.0 * (speed as f64)
         }
-        else if speed >= 5 && speed <= 8 {
-            4.0 * speed * 0.90
+        else if speed > 4 && speed < 9 {
+            221.0 * (speed as f64) * 0.90
         }
-        else if speed >= 9 && speed <= 10 {
-            4.0 * speed * 0.77
+        else {
+            221.0 * (speed as f64) * 0.77
         };
     
     return prod_rate;
@@ -30,7 +30,6 @@ pub fn production_rate_per_hour(speed: u8) -> f64 {
 pub fn working_items_per_minute(speed: u8) -> u32 {
 
     let items_per_minute: u32 = production_rate_per_hour(speed) as u32 / 60;
-
     return items_per_minute;
     
     // unimplemented!("calculate the amount of working items at speed: {}", speed)
