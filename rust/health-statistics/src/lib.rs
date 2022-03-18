@@ -19,15 +19,21 @@ impl User {
     }
 
     pub fn name(&self) -> &str {
-        unimplemented!()
+        // unimplemented!()
+        let name = &self.name;
+        name
     }
 
     pub fn age(&self) -> u32 {
-        unimplemented!()
+        // unimplemented!()
+        let age = &self.age;
+        age
     }
 
     pub fn weight(&self) -> f32 {
-        unimplemented!()
+        let weight = &self.weight;
+        weight
+        // unimplemented!()
     }
 
     pub fn set_age(&mut self, new_age: u32) {
