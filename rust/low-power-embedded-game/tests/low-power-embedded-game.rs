@@ -11,13 +11,11 @@ mod divmod {
     }
 
     #[test]
-    #[ignore]
     fn powerup() {
         assert_eq!(divmod(100, 3), (33, 1));
     }
 
     #[test]
-    #[ignore]
     fn less() {
         assert_eq!(divmod(3, 10), (0, 3));
     }
