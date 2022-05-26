@@ -95,7 +95,6 @@ mod manhattan {
     }
 
     #[test]
-    #[ignore]
     fn q4_unit() {
         assert_eq!(Position(-1, 1).manhattan(), 2);
     }
