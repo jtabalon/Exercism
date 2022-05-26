@@ -5,10 +5,9 @@
 pub fn divmod(dividend: i16, divisor: i16) -> (i16, i16) {
     let mut ans: i16 = 0;
     let mut rem: i16 = 0;
-    ans = &dividend / &divisor;
-    rem = &dividend % &divisor;
-    let tup_ans = (ans, rem);
-    tup_ans
+    ans = dividend / divisor;
+    rem = dividend % divisor;
+    (ans, rem)
     // unimplemented!("implement `fn divmod`");
 }
 
