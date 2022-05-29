@@ -25,5 +25,7 @@ pub fn fibonacci() -> Vec<u8> {
             buffer[i] = buffer[i-1] + buffer[i-2];
         }
     }
+
+    return buffer;
     
 }
