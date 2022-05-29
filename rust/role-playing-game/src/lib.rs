@@ -10,16 +10,15 @@ pub struct Player {
 
 impl Player {
     pub fn revive(&self) -> Option<Player> {
-        // below level 10
-        if self.level <= 10 and self.health == 0 {
-            Some(Player {health: 100, mana: None, level: self.level})
+        if self.health > 0 {
+            return None;
         }
-        else {
-            if self.health == 0 {
-                Some(Player {health: 100, mana: Some(100), level: self.level})
-            }
-        }
-        // geq level 10
+
+        Some(Self {
+            health: 100,
+            level: self.level, 
+            mana: if self.level >= 10 { Some(100) } else { None },
+        })
     }
 
     pub fn cast_spell(&mut self, mana_cost: u32) -> u32 {
