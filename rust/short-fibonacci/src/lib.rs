@@ -1,6 +1,6 @@
 /// Create an empty vector
 pub fn create_empty() -> Vec<u8> {
-    unimplemented!()
+    vec![]
 }
 
 /// Create a buffer of `count` zeroes.
