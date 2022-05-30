@@ -22,6 +22,13 @@ impl Player {
     }
 
     pub fn cast_spell(&mut self, mana_cost: u32) -> u32 {
-        unimplemented!("Cast a spell of cost {}", mana_cost)
+        // if no mana pool return 0
+        dmg = 2 * mana_cost
+
+
+
+        // return amount of damage the spell performs
+
+        
     }
 }
