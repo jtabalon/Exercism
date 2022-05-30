@@ -25,6 +25,13 @@ impl Player {
         // if no mana pool return 0
         dmg = 2 * mana_cost
 
+        // modify below:
+        // Some(Self {
+        //     health: 100,
+        //     level: self.level, 
+        //     mana: if self.level >= 10 { Some(100) } else { None },
+        // })
+
 
 
         // return amount of damage the spell performs
