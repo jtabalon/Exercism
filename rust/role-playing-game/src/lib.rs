@@ -29,6 +29,13 @@ impl Player {
             self.health -= mana_cost;
             return 0
         }
+        else if self.mana < dmg {
+            return 0
+        }
+
+
+
+        
 
 
         // })
