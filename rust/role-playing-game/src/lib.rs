@@ -27,10 +27,14 @@ impl Player {
 
         if self.mana == None {
             self.health -= mana_cost;
-            return 0
+            return 0;
         }
         else if self.mana < dmg {
-            return 0
+            return 0;
+        }
+        else {
+            self.mana -= mana_cost;
+            return dmg;
         }
 
 
