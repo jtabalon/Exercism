@@ -25,6 +25,11 @@ impl Player {
         // if no mana pool return 0
         dmg = 2 * mana_cost
 
+        if self.mana == None {
+            self.health -= mana_cost;
+            return 0
+        }
+
         // modify below:
         Some(Self {
             health: 100,
