@@ -26,10 +26,10 @@ impl Player {
         dmg = 2 * mana_cost
 
         // modify below:
-        // Some(Self {
-        //     health: 100,
-        //     level: self.level, 
-        //     mana: if self.level >= 10 { Some(100) } else { None },
+        Some(Self {
+            health: 100,
+            level: self.level, 
+            mana: if self.level >= 10 { Some(100) } else { None },
         // })
 
 
