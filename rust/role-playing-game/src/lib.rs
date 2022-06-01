@@ -31,8 +31,6 @@ impl Player {
             }
             return 0
         }
-
-
         if let Some(mana) = self.mana {
             if mana >= mana_cost { 
                 self.mana = Some(mana - mana_cost);
