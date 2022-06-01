@@ -39,16 +39,10 @@ impl Player {
             else {
                 return 0;
             }
-
         }
 
         self.health -= mana_cost;
         return 0;
-
-
-
-
-
 
     }
 }
