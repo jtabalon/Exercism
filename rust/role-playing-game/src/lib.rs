@@ -22,6 +22,17 @@ impl Player {
     }
 
     pub fn cast_spell(&mut self, mana_cost: u32) -> u32 {
+        if self.level < 10 {
+            if mana_cost <= self.health {
+                self.health -= mana_cost;
+            }
+            else {
+                self.health = 0;
+            }
+            return 0
+        }
+
+
         if let Some(mana) = self.mana {
             if mana >= mana_cost { 
                 self.mana = Some(mana - mana_cost);
