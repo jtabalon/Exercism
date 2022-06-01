@@ -22,37 +22,6 @@ impl Player {
     }
 
     pub fn cast_spell(&mut self, mana_cost: u32) -> u32 {
-        // if no mana pool return 0
-        let dmg:u32 = 2 * mana_cost;
-
-        let mut mana_cost_holder:u32 = None;
-
-        // match mana_cost_holder {
-            
-        // }
-
-        if self.mana == Some(None) {
-            self.health -= Some(mana_cost);
-            return 0;
-        }
-        else if self.mana < Some(dmg) {
-            return 0;
-        }
-        else {
-            self.mana -= mana_cost;
-            return dmg;
-        }
-
-
-
-        
-
-
-        // })
-
-
-
-        // return amount of damage the spell performs
 
         
     }
