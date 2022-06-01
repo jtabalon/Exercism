@@ -22,7 +22,25 @@ impl Player {
     }
 
     pub fn cast_spell(&mut self, mana_cost: u32) -> u32 {
+        match self.mana {
+            Some(x) if x >= mana_cost => {
+                let remaining_mana = x - mana_cost;
+                if remaining_mana > 0 {
+                    self.mana = Some(remaining_mana);
+                } else {
+                    self.mana = None;
+                }
+                mana_cost * 2
+            }
 
-        
+
+
+
+        }
+
+
+
+
+
     }
 }
