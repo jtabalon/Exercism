@@ -7,9 +7,13 @@ Learn about Guido, the creator of the Python language: https://en.wikipedia.org/
 # TODO: consider defining the 'PREPARATION_TIME' constant
 #       equal to the time it takes to prepare a single layer
 
+from regex import R
+
+
+EXPECTED_BAKE_TIME = 40
 
 # TODO: define the 'bake_time_remaining()' function
-def bake_time_remaining():
+def bake_time_remaining(elapsed_bake_time):
     """Calculate the bake time remaining.
 
     :param elapsed_bake_time: int - baking time already elapsed.
@@ -20,7 +24,7 @@ def bake_time_remaining():
     based on the `EXPECTED_BAKE_TIME`.
     """
 
-    pass
+    return EXPECTED_BAKE_TIME - elapsed_bake_time
 
 
 # TODO: define the 'preparation_time_in_minutes()' function
