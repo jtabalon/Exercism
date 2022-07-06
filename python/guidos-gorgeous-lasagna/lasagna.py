@@ -11,6 +11,8 @@ from regex import R
 
 
 EXPECTED_BAKE_TIME = 40
+PREPARATION_TIME = 2
+
 
 # TODO: define the 'bake_time_remaining()' function
 def bake_time_remaining(elapsed_bake_time):
@@ -31,8 +33,14 @@ def bake_time_remaining(elapsed_bake_time):
 #       and consider using 'PREPARATION_TIME' here
 
 def preparation_time_in_minutes(num_layers):
-    return num_layers * 2
-
+    return num_layers * PREPARATION_TIME
 
 
 # TODO: define the 'elapsed_time_in_minutes()' function
+
+def elapsed_time_in_minutes(number_of_layers, elapsed_bake_time):
+    return 
+
+
+
+
