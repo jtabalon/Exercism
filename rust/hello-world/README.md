@@ -1,4 +1,5 @@
-# Hello World
+#
+Hello World
 
 Welcome to Hello World on Exercism's Rust Track.
 If you need help running the tests or submitting your code, check out `HELP.md`.
